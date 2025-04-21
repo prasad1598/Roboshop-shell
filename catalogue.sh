@@ -9,6 +9,7 @@ curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue
 cd /app
 rm -rf /app/*
 unzip /tmp/catalogue.zip
+npm install
 systemctl enable catalogue
 systemctl start catalogue
 dnf install mongodb-mongosh -y
