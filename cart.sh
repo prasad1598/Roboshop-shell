@@ -1,7 +1,7 @@
 dnf module disable nodejs -y
 dnf module enable nodejs:20 -y
 dnf install nodejs -y
-cp card.service vim /etc/systemd/system/cart.service
+cp cart.service vim /etc/systemd/system/cart.service
 
 useradd roboshop
 mkdir /app

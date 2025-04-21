@@ -9,6 +9,7 @@ curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue
 cd /app
 rm -rf /app/*
 unzip /tmp/catalogue.zip
+cd /app
 npm install
 systemctl enable catalogue
 systemctl start catalogue
