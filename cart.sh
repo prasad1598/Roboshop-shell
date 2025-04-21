@@ -1,14 +1,14 @@
 dnf module disable nodejs -y
 dnf module enable nodejs:20 -y
 dnf install nodejs -y
-cp cart.service vim /etc/systemd/system/cart.service
+cp cart.service /etc/systemd/system/cart.service
 
 useradd roboshop
 mkdir /app
 rm /tmp/*
 curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart-v3.zip
 cd /app
-rm -rf .
+rm -rf /app/*
 unzip /tmp/cart.zip
 npm install
 systemctl daemon-reload
