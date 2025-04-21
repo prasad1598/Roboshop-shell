@@ -11,4 +11,5 @@ rm -rf /app/*
 unzip /tmp/catalogue.zip
 systemctl enable catalogue
 systemctl start catalogue
+dnf install mongodb-mongosh -y
 mongosh --host mongodb-dev.prasaddevops.shop </app/db/master-data.js
