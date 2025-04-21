@@ -8,9 +8,10 @@ useradd roboshop
 mkdir /app
 rm -rf /tmp/user.zip
 curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user-v3.zip
+rm -rf /app/*
 cd /app
-rm -rf .
 unzip /tmp/user.zip
+cd /app
 npm install
 systemctl daemon-reload
 systemctl enable user
