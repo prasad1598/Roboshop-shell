@@ -8,7 +8,7 @@ mkdir /app
 rm /tmp/*
 curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart-v3.zip
 cd /app
-rm /app/*
+rm -rf .
 unzip /tmp/cart.zip
 npm install
 systemctl daemon-reload
