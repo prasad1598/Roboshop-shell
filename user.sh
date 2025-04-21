@@ -9,8 +9,7 @@ mkdir /app
 rm -rf /tmp/user.zip
 curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user-v3.zip
 rm -rf /app/*
-cd /app
-unzip /tmp/user.zip
+unzip /tmp/user.zip -d /app/.
 cd /app
 npm install
 systemctl daemon-reload
