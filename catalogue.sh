@@ -10,4 +10,4 @@ cd /app
 unzip /tmp/catalogue.zip
 systemctl enable catalogue
 systemctl start catalogue
-mongosh --host MONGODB-SERVER-IPADDRESS </app/db/master-data.js
+mongosh --host mongodb-dev.prasaddevops.shop </app/db/master-data.js
